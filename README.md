@@ -20,7 +20,7 @@ Install with:
 
 ```bash
 pip install tensorflow numpy matplotlib
-bash'''
+
 ⚠️ Note: tensorflow-gpu is not used due to installation issues in the notebook. If you have a GPU, ensure CUDA and cuDNN are properly configured or proceed with the CPU version.
 
 🗂️ Dataset Structure
@@ -127,9 +127,7 @@ To make predictions with a new image:
 
 Load the saved model:
 
-python
-Copy
-Edit
+
 from tensorflow.keras.models import load_model
 model = load_model('model_inception.h5')
 Preprocess your image:
@@ -140,9 +138,7 @@ Normalize and apply InceptionV3 preprocessing
 
 Predict:
 
-python
-Copy
-Edit
+
 import numpy as np
 prediction = model.predict(np.expand_dims(preprocessed_image, axis=0))
 ✅ Example code is available in the notebook.
@@ -159,9 +155,7 @@ Model saved in HDF5 format. Consider migrating to .keras in future versions.
 📄 License
 This project is licensed under the MIT License.
 
-yaml
-Copy
-Edit
+
 
 ---
 
