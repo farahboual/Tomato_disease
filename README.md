@@ -1,6 +1,10 @@
 ###Tomato Leaf Disease Classification
+
+
 ##Overview
 This project implements a deep learning model for classifying tomato leaf diseases using the InceptionV3 architecture with transfer learning. The model is trained on a dataset of tomato leaf images to identify various diseases and healthy leaves.
+
+
 ##Requirements
 To run this project, you need the following dependencies:
 
