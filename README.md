@@ -20,14 +20,13 @@ Install with:
 
 ```bash
 pip install tensorflow numpy matplotlib
+bash'''
 ⚠️ Note: tensorflow-gpu is not used due to installation issues in the notebook. If you have a GPU, ensure CUDA and cuDNN are properly configured or proceed with the CPU version.
 
 🗂️ Dataset Structure
 The dataset should be organized as follows:
 
-markdown
-Copy
-Edit
+
 datasets/
 ├── train/
 │   ├── Tomato___Late_blight/
@@ -50,9 +49,8 @@ Validation set: 4,588 images across 10 classes
 
 📍 Make sure the dataset is available at:
 
-bash
-Copy
-Edit
+'''bash
+
 /content/drive/MyDrive/datasets/train  
 /content/drive/MyDrive/datasets/valid
 Or update the paths in the code as needed.
