@@ -13,7 +13,7 @@ Glob
 Install the required packages using:
 pip install tensorflow numpy matplotlib
 
-Note: The tensorflow-gpu package is not used due to installation issues observed in the notebook. Ensure you have a compatible version of TensorFlow installed. If you have a GPU, ensure CUDA and cuDNN are properly configured, or use the CPU version as shown in the notebook.
+Note: The tensorflow-gpu package is not used due to installation issues (missing CUDA generation error observed in the notebook). Ensure you have a compatible version of TensorFlow installed. If using a GPU, ensure CUDA and cuDNN are properly configured; otherwise, use the CPU version as shown in the notebook.
 Dataset
 The dataset is expected to be organized in the following structure:
 datasets/
@@ -34,8 +34,8 @@ datasets/
         ...
 
 
-Training set: Contains 18,345 images across 10 classes.
-Validation set: Contains 4,588 images across 10 classes.
+Training set: Contains 18,435 images across 10 classes.
+Validation set: Contains 4,568 images across 10 classes.
 Ensure the dataset is accessible at the specified paths (/content/drive/MyDrive/datasets/train and /content/drive/MyDrive/datasets/valid) or update the paths in the code accordingly.
 
 Model Architecture
@@ -66,7 +66,7 @@ Batch Size: 16 (training), 32 (validation)
 Training Results
 
 Final training accuracy: ~85.47%
-Final validation accuracy: ~83.26%
+Final validation accuracy: ~83.20%
 Loss and accuracy plots are generated and saved as LossVal_loss.png and AccVal_acc.png.
 
 Usage
@@ -106,7 +106,7 @@ Notes
 
 The notebook was run on a Google Colab environment, as indicated by the paths (/content/drive/MyDrive/...). For local execution, update the dataset paths to match your file system.
 The nvidia-smi command failed in the notebook, indicating no GPU was detected. Ensure GPU support is properly configured if you intend to use a GPU.
-The tensorflow-gpu installation failed due to a metadata generation error. The notebook uses the standard tensorflow package (version 2.17.1), which worked successfully.
+The tensorflow-gpu installation failed due to a missing CUDA generation error. The notebook uses the standard tensorflow package (version 2.17.1), which worked successfully.
 The model is saved in HDF5 format. Consider using the native Keras format (.keras) for future compatibility, as suggested by the warning in the notebook.
 
 License
